@@ -471,7 +471,7 @@ label[for="num"]::before {
     opacity: 0.40;
 }
 
-/* reantals */
+/* rentals */
 .rentals {
     padding-top: 60px;
     padding-bottom: 30px;
@@ -509,7 +509,7 @@ label[for="num"]::before {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    gap: 30px;
+    gap: 28px;
 }
 
 .rentals .card {
@@ -526,6 +526,16 @@ label[for="num"]::before {
     min-width: 288px;
     height: 380px;
     align-items: flex-start;
+}
+
+@media screen and (max-width: 426px) {
+    .rentals .card {
+        margin: auto;
+    }
+
+    .tab-content form {
+        flex-direction: column;
+    }
 }
 
 .rentals .card .end {
@@ -693,7 +703,7 @@ footer {
 
 .company {
     flex: 5;
-    min-width: 500px;
+    max-width: 500px;
 }
 
 .company big {
@@ -734,7 +744,7 @@ footer {
 }
 
 .column h5 {
-    margin-bottom: 24px;
+    margin: 15px 0 24px;
 }
 
 .column a {
