@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <!-- libs -->
+    <div>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+            integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+            integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+            integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+            rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet">
+    </div>
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+    <link rel="stylesheet" href="styles/home.css">
+</head>
+
+<body>
+    <!-- nav -->
+    <nav>
+        <a href="#">
+            <img src="imgs/def.svg" alt="Logo">
+        </a>
+        <ul>
+            <li class="active">
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#how">How it Works</a>
+            </li>
+            <li>
+                <a href="#why">Why Choose us</a>
+            </li>
+            </li>
+            <li>
+                <a href="#">Contact Us</a>
+            </li>
+        </ul>
+        <div>
+            <a class="link">
+                Register
+            </a>
+            <button class="btn btn-secondary">
+                Login
+            </button>
+        </div>
+        <div class="mobile-menu" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+            aria-controls="offcanvasRight">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </nav>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasRightLabel"></h5>
+            <button id="close-menu" type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="mobile-list">
+                <li>
+                    <a href="#">Login</a>
+                </li>
+                <li>
+                    <a href="#">Register</a>
+                </li>
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">How it Works</a>
+                </li>
+                <li>
+                    <a href="#">Why Choose us</a>
+                </li>
+                <li>
+                    <a href="#">Testimonials</a>
+                </li>
+                </li>
+                <li>
+                    <a href="#">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- hero -->
+    <header id="hero">
+        <section>
+            <div class="left">
+                <small>Lorem ipsum dolor sit amet consectetur adipisicing.</small>
+                <h1>Lorem, ipsum dolor.</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores tenetur assumenda aperiam
+                    praesentium vel eum laboriosam quisquam in cumque aliquam!
+                </p>
+                <div class="btns">
+                    <a href="#">
+                        <button class="btn btn-secondary">
+                            Book Now
+                        </button>
+                    </a>
+                    <a href="#">
+                        See all Cars
+                    </a>
+                </div>
+            </div>
+            <div class="right">
+                <img src="imgs/def.svg" alt="Hero banner image">
+            </div>
+        </section>
+    </header>
+    <!-- search -->
+    <section id="tabs">
+        <div class="wrap">
+            <div class="tabs">
+                <button id="activeTab" class="tab" onclick="openTab(event, 'oneway')">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path
+                            d="M21.52 13.67L13.52 8.95002V3.51003C13.52 3.08336 13.3733 2.72336 13.08 2.43003C12.7867 2.13669 12.4267 1.99002 12 1.99002C11.5733 1.99002 11.2133 2.13669 10.92 2.43003C10.6267 2.72336 10.48 3.08336 10.48 3.51003V8.95002L2.56 13.67C2.18667 13.8834 2 14.1767 2 14.55C2 14.9234 2.13333 15.2167 2.4 15.43C2.66667 15.6434 2.98667 15.6967 3.36 15.59L10.48 13.51V18.95L8.24 20.31C8.08 20.4167 8 20.5767 8 20.79V21.35C8 21.51 8.06667 21.6434 8.2 21.75C8.33333 21.8567 8.48 21.8834 8.64 21.83L12 20.95L15.36 21.83C15.52 21.8834 15.6667 21.8567 15.8 21.75C15.9333 21.6434 16 21.51 16 21.35V20.79C16 20.5767 15.92 20.4167 15.76 20.31L13.52 18.95V13.51L20.64 15.59C21.0133 15.6967 21.3333 15.6434 21.6 15.43C21.8667 15.2167 22 14.9234 22 14.55C22 14.1767 21.8133 13.8834 21.44 13.67H21.52Z"
+                            fill="#656565" />
+                    </svg>
+                    One Way
+                </button>
+                <button class="tab" onclick="openTab(event, 'roundtrip')">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path
+                            d="M17.04 5.19002C17.04 4.97669 17.1333 4.83002 17.32 4.75002C17.5066 4.67002 17.68 4.71002 17.84 4.87002L20.64 7.67002C20.7466 7.77669 20.8 7.89669 20.8 8.03002C20.8 8.16335 20.7466 8.28335 20.64 8.39002L17.84 11.11C17.68 11.27 17.5066 11.31 17.32 11.23C17.1333 11.15 17.04 11.0034 17.04 10.79V9.03002H14C13.7333 9.03002 13.5066 8.92335 13.32 8.71002C13.1333 8.49669 13.04 8.25669 13.04 7.99002C13.04 7.72335 13.1333 7.49669 13.32 7.31002C13.5066 7.12335 13.7333 7.03002 14 7.03002H17.04V5.19002ZM9.99995 7.03002C9.73328 7.03002 9.50662 7.12335 9.31995 7.31002C9.13328 7.49669 9.03995 7.72335 9.03995 7.99002C9.03995 8.25669 9.13328 8.49669 9.31995 8.71002C9.50662 8.92335 9.73328 9.03002 9.99995 9.03002C10.2666 9.03002 10.5066 8.92335 10.72 8.71002C10.9333 8.49669 11.04 8.25669 11.04 7.99002C11.04 7.72335 10.9333 7.49669 10.72 7.31002C10.5066 7.12335 10.2666 7.03002 9.99995 7.03002ZM5.99995 7.03002C5.73328 7.03002 5.50662 7.12335 5.31995 7.31002C5.13328 7.49669 5.03995 7.72335 5.03995 7.99002C5.03995 8.25669 5.13328 8.49669 5.31995 8.71002C5.50662 8.92335 5.73328 9.03002 5.99995 9.03002C6.26662 9.03002 6.50662 8.92335 6.71995 8.71002C6.93328 8.49669 7.03995 8.25669 7.03995 7.99002C7.03995 7.72335 6.93328 7.49669 6.71995 7.31002C6.50662 7.12335 6.26662 7.03002 5.99995 7.03002ZM7.03995 16.95H9.99995C10.2666 16.95 10.5066 16.8567 10.72 16.67C10.9333 16.4834 11.04 16.2567 11.04 15.99C11.04 15.7234 10.9333 15.4967 10.72 15.31C10.5066 15.1234 10.2666 15.0034 9.99995 14.95H7.03995V13.19C7.03995 12.9767 6.93328 12.83 6.71995 12.75C6.50662 12.67 6.31995 12.71 6.15995 12.87L3.35995 15.67C3.25328 15.7234 3.19995 15.83 3.19995 15.99C3.19995 16.15 3.25328 16.2567 3.35995 16.31L6.15995 19.11C6.31995 19.27 6.50662 19.31 6.71995 19.23C6.93328 19.15 7.03995 19.0034 7.03995 18.79V16.95ZM14 16.95C14.2666 16.95 14.5066 16.8567 14.72 16.67C14.9333 16.4834 15.04 16.2567 15.04 15.99C15.04 15.7234 14.9333 15.4834 14.72 15.27C14.5066 15.0567 14.2666 14.95 14 14.95C13.7333 14.95 13.5066 15.0567 13.32 15.27C13.1333 15.4834 13.04 15.7234 13.04 15.99C13.04 16.2567 13.1333 16.4834 13.32 16.67C13.5066 16.8567 13.7333 16.95 14 16.95ZM18 16.95C18.2666 16.95 18.5066 16.8567 18.72 16.67C18.9333 16.4834 19.04 16.2567 19.04 15.99C19.04 15.7234 18.9333 15.4834 18.72 15.27C18.5066 15.0567 18.2666 14.95 18 14.95C17.7333 14.95 17.5066 15.0567 17.32 15.27C17.1333 15.4834 17.04 15.7234 17.04 15.99C17.04 16.2567 17.1333 16.4834 17.32 16.67C17.5066 16.8567 17.7333 16.95 18 16.95Z"
+                            fill="#656565" />
+                    </svg>
+                    Roundtrip
+                </button>
+            </div>
+            <div id="oneway" class="tab-content">
+                <form action="">
+                    <div class="inp flight">
+                        <label for="flightNo">Flight Number</label>
+                        <input type="text" name="flightNo" id="flightNo" placeholder="XXXXXXX" required>
+                    </div>
+                    <div class="inp">
+                        <label for="pickup">Pick Up</label>
+                        <input type="text" name="pickup" id="pickup" placeholder="Search Location" required>
+                    </div>
+                    <div class="inp">
+                        <label for="dropoff">Drop Off</label>
+                        <input type="text" name="dropoff" id="dropoff" placeholder="Search Location" required>
+                    </div>
+                    <div class="inp">
+                        <label for="arrival">Flight Arrival</label>
+                        <input type="datetime-local" name="arrival" id="arrival" required>
+                    </div>
+                    <div class="inp nums">
+                        <label for="num" class="hide">-</label>
+                        <input type="text" name="num" id="num" value="1" required>
+                    </div>
+                    <div class="wr">
+                        <button type="submit" class="btn-sub">
+                            SEARCH BOOKING
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div id="roundtrip" class="tab-content" style="display:none">
+                <form action="">
+                    <div class="inp flight">
+                        <label for="flightNo">Flight Number</label>
+                        <input type="text" name="flightNo" id="flightNo" placeholder="XXXXXXX" required>
+                    </div>
+                    <div class="inp">
+                        <label for="pickup">Pick Up</label>
+                        <input type="text" name="pickup" id="pickup" placeholder="Search Location" required>
+                    </div>
+                    <div class="inp">
+                        <label for="dropoff">Drop Off</label>
+                        <input type="text" name="dropoff" id="dropoff" placeholder="Search Location" required>
+                    </div>
+                    <div class="inp">
+                        <label for="arrival">Flight Arrival</label>
+                        <input type="datetime-local" name="arrival" id="arrival" required>
+                    </div>
+                    <div class="inp">
+                        <label for="return">Flight Return</label>
+                        <input type="datetime-local" name="return" id="return" required>
+                    </div>
+                    <div class="inp nums">
+                        <label for="num" class="hide">-</label>
+                        <input type="text" name="num" id="num" value="1" required>
+                    </div>
+                    <div class="wr">
+                        <button type="submit" class="btn-sub">
+                            SEARCH BOOKING
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- how it works -->
+    <div class="wrapper">
+        <section id="how">
+            <h2>How It Works</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime reprehenderit suscipit autem aliquid
+                quaerat non, sed cumque consectetur vel ex asperiores fugiat nostrum, porro enim quis sint provident
+                deserunt earum!
+            </p>
+            <div class="steps">
+                <div class="step">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <b>Choose Location</b>
+                    <span>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque vero dolores facilis ut iste
+                        autem dicta voluptate blanditiis amet ipsa.
+                    </span>
+                </div>
+                <div class="step">
+                    <i class="fa-solid fa-calendar"></i>
+                    <b>Choose Location</b>
+                    <span>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque vero dolores facilis ut iste
+                        autem dicta voluptate blanditiis amet ipsa.
+                    </span>
+                </div>
+                <div class="step">
+                    <i class="fa-solid fa-car"></i>
+                    <b>Choose Location</b>
+                    <span>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque vero dolores facilis ut iste
+                        autem dicta voluptate blanditiis amet ipsa.
+                    </span>
+                </div>
+                <!-- <div class="img-left">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="357" height="86" viewBox="0 0 357 86" fill="none">
+                        <path
+                            d="M355.52 6.29846C355.794 6.33766 356.047 6.14785 356.086 5.8745C356.125 5.60116 355.936 5.34779 355.662 5.30858L355.52 6.29846ZM0.9118 80.7655C42.9812 88.1326 72.9023 85.2455 97.4529 77.2243C121.986 69.2087 141.129 56.0714 161.606 43.0251C182.091 29.9731 203.947 16.9854 233.981 9.15914C264.016 1.3328 302.263 -1.33967 355.52 6.29846L355.662 5.30858C302.304 -2.34401 263.919 0.324588 233.729 8.19145C203.539 16.0584 181.576 29.116 161.068 42.1818C140.552 55.2534 121.529 68.3063 97.1423 76.2738C72.7731 84.2357 43.0211 87.1244 1.08429 79.7805L0.9118 80.7655Z"
+                            fill="#1A202C" />
+                    </svg>
+                </div>
+                <div class="img-right">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="357" height="86" viewBox="0 0 357 86" fill="none">
+                        <path
+                            d="M355.52 6.29846C355.794 6.33766 356.047 6.14785 356.086 5.8745C356.125 5.60116 355.936 5.34779 355.662 5.30858L355.52 6.29846ZM0.9118 80.7655C42.9812 88.1326 72.9023 85.2455 97.4529 77.2243C121.986 69.2087 141.129 56.0714 161.606 43.0251C182.091 29.9731 203.947 16.9854 233.981 9.15914C264.016 1.3328 302.263 -1.33967 355.52 6.29846L355.662 5.30858C302.304 -2.34401 263.919 0.324588 233.729 8.19145C203.539 16.0584 181.576 29.116 161.068 42.1818C140.552 55.2534 121.529 68.3063 97.1423 76.2738C72.7731 84.2357 43.0211 87.1244 1.08429 79.7805L0.9118 80.7655Z"
+                            fill="#1A202C" />
+                    </svg>
+                </div> -->
+            </div>
+        </section>
+    </div>
+    <!-- car rentals -->
+    <section class="rentals">
+        <h2>Most popular car rental deals</h2>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam quae in tempora eaque corporis enim facere
+            temporibus quasi harum modi?
+        </p>
+        <div class="tabs deals">
+            <button id="activeTabs" class="tabs" onclick="openTabs(event, 'popular')">
+                Popular
+            </button>
+            <button class="tabs" onclick="openTabs(event, 'large')">
+                Large Car
+            </button>
+            <button class="tabs" onclick="openTabs(event, 'small')">
+                Small Car
+            </button>
+            <button class="tabs" onclick="openTabs(event, 'exclusive')">
+                Exclusive Car
+            </button>
+        </div>
+        <div id="popular" class="tab-contents">
+            <div class="card">
+                <span>Title</span>
+                <div class="end">
+                    <div class="price">
+                        $72.00/<span>day</span>
+                    </div>
+                    <div class="btn">
+                        Rent Now
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <span>Title</span>
+                <div class="end">
+                    <div class="price">
+                        $72.00/<span>day</span>
+                    </div>
+                    <div class="btn">
+                        Rent Now
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <span>Title</span>
+                <div class="end">
+                    <div class="price">
+                        $72.00/<span>day</span>
+                    </div>
+                    <div class="btn">
+                        Rent Now
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="large" class="tab-contents">
+            <div class="card">
+                <span>Title</span>
+                <div class="end">
+                    <div class="price">
+                        $72.00/<span>day</span>
+                    </div>
+                    <div class="btn">
+                        Rent Now
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <span>Title</span>
+                <div class="end">
+                    <div class="price">
+                        $72.00/<span>day</span>
+                    </div>
+                    <div class="btn">
+                        Rent Now
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <span>Title</span>
+                <div class="end">
+                    <div class="price">
+                        $72.00/<span>day</span>
+                    </div>
+                    <div class="btn">
+                        Rent Now
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <span>Title</span>
+                <div class="end">
+                    <div class="price">
+                        $72.00/<span>day</span>
+                    </div>
+                    <div class="btn">
+                        Rent Now
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <span>Title</span>
+                <div class="end">
+                    <div class="price">
+                        $72.00/<span>day</span>
+                    </div>
+                    <div class="btn">
+                        Rent Now
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="small" class="tab-contents">
+            <div class="card">
+                <span>Title</span>
+                <div class="end">
+                    <div class="price">
+                        $72.00/<span>day</span>
+                    </div>
+                    <div class="btn">
+                        Rent Now
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="exclusive" class="tab-contents">
+            <div class="card">
+                <span>Title</span>
+                <div class="end">
+                    <div class="price">
+                        $72.00/<span>day</span>
+                    </div>
+                    <div class="btn">
+                        Rent Now
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <span>Title</span>
+                <div class="end">
+                    <div class="price">
+                        $72.00/<span>day</span>
+                    </div>
+                    <div class="btn">
+                        Rent Now
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- why choose us -->
+    <div class="wrapper" id="why">
+        <section id="how">
+            <h2>Why Choose Us</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime reprehenderit suscipit autem aliquid
+                quaerat non, sed cumque consectetur vel ex asperiores
+            </p>
+            <div class="steps why">
+                <div class="step">
+                    <div>
+                        <i class="fa-solid fa-hand"></i>
+                        <b>Private Service</b>
+                    </div>
+                    <span>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque vero dolores facilis ut iste
+                        autem dicta voluptate blanditiis amet ipsa.
+                    </span>
+                </div>
+                <div class="step">
+                    <div>
+                        <i class="fa-solid fa-lock"></i>
+                        <b>Safe Hands</b>
+                    </div>
+                    <span>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque vero dolores facilis ut iste
+                        autem dicta voluptate blanditiis amet ipsa.
+                    </span>
+                </div>
+                <div class="step">
+                    <div>
+                        <i class="fa-solid fa-heart"></i>
+                        <b>Satisfied Customers</b>
+                    </div>
+                    <span>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque vero dolores facilis ut iste
+                        autem dicta voluptate blanditiis amet ipsa.
+                    </span>
+                </div>
+                <div class="step">
+                    <div>
+                        <i class="fa-solid fa-globe"></i>
+                        <b>100% Refund</b>
+                    </div>
+                    <span>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque vero dolores facilis ut iste
+                        autem dicta voluptate blanditiis amet ipsa.
+                    </span>
+                </div>
+                <div class="step">
+                    <div>
+                        <i class="fa-solid fa-car"></i>
+                        <b>Globally Engaged</b>
+                    </div>
+                    <span>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque vero dolores facilis ut iste
+                        autem dicta voluptate blanditiis amet ipsa.
+                    </span>
+                </div>
+                <div class="step">
+                    <div>
+                        <i class="fa-solid fa-phone"></i>
+                        <b>24/7 Customer Help</b>
+                    </div>
+                    <span>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque vero dolores facilis ut iste
+                        autem dicta voluptate blanditiis amet ipsa.
+                    </span>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- strengths -->
+    <section id="strength">
+        <div class="strength">
+            <h3>You Are Our Strength!</h3>
+            <p>
+                Our vision, 'Flawless, timely, convenient, and friendly airport transfers that ease the latter part of
+                your journey every time, all the time, and anywhere.' Our mission is based on ensuring our technology,
+                people, knowledge, care, and expertise are continuously refreshed with innovation, so every traveler is
+                always happy!
+            </p>
+            <b>
+                Just try how exceptional our service is from reservation to pick up and arrival, and you will
+                see…
+            </b>
+            <big>THAT EASY!</big>
+        </div>
+    </section>
+    <!-- FAQs -->
+    <section id="faqs">
+        <h2>Frequently Asked Questions</h2>
+        <p>
+            Look through some of our frequently answered questions
+        </p>
+        <div class="accordion">
+            <div class="accordion-items">
+                <div class="accordion-title" onclick="toggleAccordion(this)">
+                    <b>What is the refund policy?</b>
+                    <span class="icon">+</span>
+
+                    <div class="accordion-content">
+                        <p>If you are not satisfied with your purchase, you may be eligible for a refund depending on
+                            the
+                            terms of the refund policy.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-items">
+                <div class="accordion-title" onclick="toggleAccordion(this)">
+                    <b>How long does shipping take?</b>
+                    <span class="icon">+</span>
+                    <div class="accordion-content">
+                        <p>Shipping times vary by location and shipping method chosen. Typically, it takes 3-5 business
+                            days
+                            for domestic shipments.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-items">
+                <div class="accordion-title" onclick="toggleAccordion(this)">
+                    <b>Do you offer technical support?</b>
+                    <span class="icon">+</span>
+                    <div class="accordion-content">
+                        <p>Yes, we offer 24/7 technical support for all our products. You can contact us anytime via
+                            email
+                            or phone.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-primary">
+            All FAQs
+        </button>
+    </section>
+    <!-- have a question -->
+    <section id="question">
+        <h3>Still Have a Question?</h3>
+        <p>Feel free to get in touch about any other questions.</p>
+        <button class="btn btn-primary">
+            Get In Touch
+        </button>
+    </section>
+    <!-- footer -->
+    <footer>
+        <div id="footer">
+            <div class="focus">
+                <div class="company">
+                    <big>LOGO</big>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                    </p>
+                    <div class="icons">
+                        <a href="#" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="column">
+                    <h5>About</h5>
+                    <a href="#">How It Works</a>
+                    <a href="#">Featured</a>
+                    <a href="#">Partnership</a>
+                    <a href="#">Business Relation</a>
+                </div>
+                <div class="column">
+                    <h5>Services</h5>
+                    <a href="#">Service X</a>
+                    <a href="#">Service X</a>
+                    <a href="#">Service X</a>
+                    <a href="#">Service X</a>
+                </div>
+                <div class="column">
+                    <h5>Terms of Use</h5>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Cookies Policy</a>
+                    <a href="#">Cancellation Policy</a>
+                </div>
+            </div>
+            <hr>
+            <span>
+                Company Name &copy; 2024. All rights reserved.
+                Developed by <a href="https://www.linkedin.com/in/amrfayezz1/" target="_blank">Amr Fayez</a>
+            </span>
+        </div>
+    </footer>
+
+    <!-- scripts -->
+    <div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"
+            integrity="sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"
+            integrity="sha512-TPh2Oxlg1zp+kz3nFA0C5vVC6leG/6mm1z9+mA81MI5eaUVqasPLO8Cuk4gMF4gUfP5etR73rgU/8PNMsSesoQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+            integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            AOS.init();
+        </script>
+    </div>
+    <!-- search -->
+    <script>
+        function openTab(evt, tabName) {
+            // Get all elements with class="tab-content" and hide them
+            var tabcontent = document.getElementsByClassName("tab-content");
+            for (var i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+                tabcontent[i].style.opacity = 0;
+            }
+
+            // Get all elements with class="tab" and remove the class "active"
+            var tablinks = document.getElementsByClassName("tab");
+            for (var i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            // Show the current tab, and add an "active" class to the button that opened the tab
+            document.getElementById(tabName).style.display = "flex";
+            setTimeout(function () {
+                document.getElementById(tabName).style.opacity = 1;
+            }, 10); // slight delay to ensure the display change has taken effect before fading in
+            evt.currentTarget.className += " active";
+        }
+        document.getElementById("activeTab").click();
+    </script>
+    <!-- deals -->
+    <script>
+        function openTabs(evt, tabName) {
+            // Get all elements with class="tab-content" and hide them
+            var tabcontent = document.getElementsByClassName("tab-contents");
+            for (var i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+                tabcontent[i].style.opacity = 0;
+            }
+
+            // Get all elements with class="tab" and remove the class "active"
+            var tablinks = document.getElementsByClassName("tabs");
+            for (var i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            // Show the current tab, and add an "active" class to the button that opened the tab
+            document.getElementById(tabName).style.display = "flex";
+            setTimeout(function () {
+                document.getElementById(tabName).style.opacity = 1;
+            }, 10); // slight delay to ensure the display change has taken effect before fading in
+            evt.currentTarget.className += " active";
+        }
+        document.getElementById("activeTabs").click();
+    </script>
+    <!-- faqs -->
+    <script>
+        function toggleAccordion(element) {
+            const item = element.parentElement;
+            const allItems = document.querySelectorAll('.accordion-item');
+
+            allItems.forEach((otherItem) => {
+                if (otherItem !== item) {
+                    otherItem.querySelector('.accordion-content').style.display = 'none';
+                    otherItem.querySelector('.icon').classList.remove('rotate');
+                }
+            });
+
+            const content = item.querySelector('.accordion-content');
+            const icon = item.querySelector('.icon');
+
+            if (content.style.display === 'block') {
+                content.style.display = 'none';
+                icon.classList.remove('rotate');
+            } else {
+                content.style.display = 'block';
+                icon.classList.add('rotate');
+            }
+        }
+    </script>
+</body>
+
+</html>
