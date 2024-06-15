@@ -669,6 +669,7 @@ h3,
 .icon {
     transition: transform 0.6s ease;
     font-size: 28px;
+    margin: auto;
 }
 
 .icon.rotate {
@@ -697,22 +698,29 @@ footer {
 .focus {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: wrap;
+    gap: 20px;
 }
-
+@media screen and (max-width: 579px) {
+    .focus {
+        flex-direction: column;
+    }
+}
 .company {
     flex: 5;
-    max-width: 500px;
+    /* max-width: 200px; */
+    margin-right: 50px;
 }
 
 .company big {
     display: block;
+    margin-top: 25px;
     margin-bottom: 20px;
 }
 
 .company p {
-    max-width: 300px;
+    max-width: 200px;
 }
 
 .icons {
@@ -740,7 +748,7 @@ footer {
 
 .column {
     flex: 2;
-    min-width: 200px;
+    /* max-width: 150px; */
 }
 
 .column h5 {
