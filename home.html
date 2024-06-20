@@ -35,13 +35,15 @@
             rel="stylesheet">
     </div>
     <link rel="shortcut icon" href="#" type="image/x-icon">
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/nav.css">
     <link rel="stylesheet" href="styles/home.css">
 </head>
 
 <body>
     <!-- nav -->
     <nav>
-        <a href="#">
+        <a href="home.html">
             <img src="imgs/def.svg" alt="Logo">
         </a>
         <ul>
@@ -59,14 +61,14 @@
                 <a href="#">Contact Us</a>
             </li>
         </ul>
-        <div>
+        <!-- <div>
             <a class="link">
                 Register
             </a>
             <button class="btn btn-secondary">
                 Login
             </button>
-        </div>
+        </div> -->
         <div class="mobile-menu" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
             aria-controls="offcanvasRight">
             <div></div>
@@ -82,12 +84,12 @@
         </div>
         <div class="offcanvas-body">
             <ul class="mobile-list">
-                <li>
+                <!-- <li>
                     <a href="#">Login</a>
                 </li>
                 <li>
                     <a href="#">Register</a>
-                </li>
+                </li> -->
                 <li>
                     <a href="#">Home</a>
                 </li>
@@ -115,12 +117,12 @@
                     praesentium vel eum laboriosam quisquam in cumque aliquam!
                 </p>
                 <div class="btns">
-                    <a href="#">
+                    <a href="booking.html">
                         <button class="btn btn-secondary">
                             Book Now
                         </button>
                     </a>
-                    <a href="#">
+                    <a href="booking.html">
                         See all Cars
                     </a>
                 </div>
@@ -152,22 +154,22 @@
                 </button>
             </div>
             <div id="oneway" class="tab-content">
-                <form action="">
+                <form action="compare.html" method="get">
                     <div class="inp flight">
-                        <label for="flightNo">Flight Number</label>
-                        <input type="text" name="flightNo" id="flightNo" placeholder="XXXXXXX" required>
+                        <label for="flightNo1">Flight Number</label>
+                        <input type="text" name="flightNo1" id="flightNo1" placeholder="XXXXXXX" required>
                     </div>
                     <div class="inp">
-                        <label for="pickup">Pick Up</label>
-                        <input type="text" name="pickup" id="pickup" placeholder="Search Location" required>
+                        <label for="pickup1">Pick Up</label>
+                        <input type="text" name="pickup1" id="pickup1" placeholder="Search Location" required>
                     </div>
                     <div class="inp">
-                        <label for="dropoff">Drop Off</label>
-                        <input type="text" name="dropoff" id="dropoff" placeholder="Search Location" required>
+                        <label for="dropoff1">Drop Off</label>
+                        <input type="text" name="dropoff1" id="dropoff1" placeholder="Search Location" required>
                     </div>
                     <div class="inp">
-                        <label for="arrival">Flight Arrival</label>
-                        <input type="datetime-local" name="arrival" id="arrival" required>
+                        <label for="arrival1">Flight Arrival</label>
+                        <input type="datetime-local" name="arrival1" id="arrival1" required>
                     </div>
                     <div class="inp nums">
                         <label for="num" class="hide">-</label>
@@ -181,26 +183,26 @@
                 </form>
             </div>
             <div id="roundtrip" class="tab-content" style="display:none">
-                <form action="">
+                <form action="compare.html" method="get">
                     <div class="inp flight">
-                        <label for="flightNo">Flight Number</label>
-                        <input type="text" name="flightNo" id="flightNo" placeholder="XXXXXXX" required>
+                        <label for="flightNo2">Flight Number</label>
+                        <input type="text" name="flightNo2" id="flightNo2" placeholder="XXXXXXX" required>
                     </div>
                     <div class="inp">
-                        <label for="pickup">Pick Up</label>
-                        <input type="text" name="pickup" id="pickup" placeholder="Search Location" required>
+                        <label for="pickup2">Pick Up</label>
+                        <input type="text" name="pickup2" id="pickup2" placeholder="Search Location" required>
                     </div>
                     <div class="inp">
-                        <label for="dropoff">Drop Off</label>
-                        <input type="text" name="dropoff" id="dropoff" placeholder="Search Location" required>
+                        <label for="dropoff2">Drop Off</label>
+                        <input type="text" name="dropoff2" id="dropoff2" placeholder="Search Location" required>
                     </div>
                     <div class="inp">
-                        <label for="arrival">Flight Arrival</label>
-                        <input type="datetime-local" name="arrival" id="arrival" required>
+                        <label for="arrival2">Flight Arrival</label>
+                        <input type="datetime-local" name="arrival2" id="arrival2" required>
                     </div>
                     <div class="inp">
-                        <label for="return">Flight Return</label>
-                        <input type="datetime-local" name="return" id="return" required>
+                        <label for="return2">Flight Return</label>
+                        <input type="datetime-local" name="return2" id="return2" required>
                     </div>
                     <div class="inp nums">
                         <label for="num" class="hide">-</label>
@@ -694,6 +696,57 @@
                 icon.classList.add('rotate');
             }
         }
+    </script>
+    <!-- flight number -->
+    <script>
+        function convertDateTime(utcTime) {
+            // Convert UTC time to local datetime format for datetime-local input
+            const date = new Date(utcTime);
+            return date.toISOString().slice(0, 16);  // Format compatible with datetime-local
+        }
+
+        $('#flightNo1').on('change', function () {
+            const flightNumber = $(this).val();
+            if (flightNumber) {
+                $.ajax({
+                    url: `http://api.aviationstack.com/v1/flights?access_key=e0cbbb045752410c7775e8ff4e0928b7
+&flight_iata=${flightNumber}`,
+                    success: function (data) {
+                        console.log(data);
+                        if (data && data.data && data.data.length > 0) {
+                            const flight = data.data[0];
+                            $('#pickup1').val(flight.departure.airport);
+                            $('#dropoff1').val(flight.arrival.airport);
+                            $('#arrival1').val(convertDateTime(flight.arrival.estimated));
+                        }
+                    },
+                    error: function (error) {
+                        console.log('Error fetching flight data:', error);
+                    }
+                });
+            }
+        });
+        $('#flightNo2').on('change', function () {
+            const flightNumber = $(this).val();
+            if (flightNumber) {
+                $.ajax({
+                    url: `http://api.aviationstack.com/v1/flights?access_key=e0cbbb045752410c7775e8ff4e0928b7
+&flight_iata=${flightNumber}`,
+                    success: function (data) {
+                        console.log(data);
+                        if (data && data.data && data.data.length > 0) {
+                            const flight = data.data[0];
+                            $('#pickup2').val(flight.departure.airport);
+                            $('#dropoff2').val(flight.arrival.airport);
+                            $('#arrival2').val(convertDateTime(flight.arrival.estimated));
+                        }
+                    },
+                    error: function (error) {
+                        console.log('Error fetching flight data:', error);
+                    }
+                });
+            }
+        });
     </script>
 </body>
 

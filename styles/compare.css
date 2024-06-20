@@ -1,0 +1,502 @@
+body {
+    background-color: #fff;
+    font-family: Barlow;
+    padding-bottom: 30px;
+}
+
+main,
+.stages {
+    padding: 40px 20px 0;
+    font-family: Barlow;
+}
+
+/* nav */
+nav {
+    background-color: transparent;
+}
+
+/* steps */
+.stages {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 33px;
+    flex-wrap: wrap;
+}
+
+.stages>div {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    background-color: #f3f3f3;
+    color: #B4B1B1;
+    padding: 20px 0;
+    border-radius: 5px;
+    margin: auto;
+    min-width: 170px;
+}
+
+.stages .current {
+    background-color: #000;
+    color: #fff;
+}
+
+.stages span {
+    width: 101px;
+}
+
+.num {
+    display: flex;
+    height: 50px;
+    width: 50px;
+    justify-content: center;
+    align-items: center;
+    background-color: #4F5362;
+    border-radius: 50%;
+    color: white;
+    position: relative;
+    /* border: 3px solid black; */
+}
+
+.num::before {
+    content: "1";
+    position: absolute;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    background-color: #4F5362;
+    border: 3px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.two .num::before {
+    content: "2";
+}
+
+.three .num::before {
+    content: "3";
+}
+
+.current .num::before {
+    border: 3px solid black;
+}
+
+.stages .done {
+    color: #1EBE64;
+}
+
+.done .num {
+    background-color: #1EBE64;
+}
+
+.done .num::before {
+    background-color: #1EBE64;
+}
+
+main {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 28px;
+}
+
+/* aside */
+aside {
+    flex: 4;
+}
+
+#tabs {
+    background-color: transparent;
+}
+
+.tabs {
+    margin-bottom: 5px;
+}
+
+.tabs button:nth-child(1) {
+    border-top-left-radius: 5px;
+}
+
+.tabs button:nth-child(2) {
+    border-top-right-radius: 5px;
+}
+
+.tabs button {
+    border-radius: 5px;
+}
+
+.tabs button.active {
+    background-color: #000;
+    color: #fff;
+}
+
+.tab-content form {
+    flex-direction: column;
+    padding: 0;
+    background-color: transparent;
+    gap: 5px;
+}
+
+form .inp {
+    border-radius: 5px;
+    border: 1px solid #D9D9D9;
+}
+
+label[for="num"]::before {
+    content: '';
+}
+
+#num {
+    padding-left: 0;
+}
+
+.numbers {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.numbers input[type="text"],
+#luggage {
+    padding-left: 0;
+}
+
+.numbers .inp {
+    flex: 1;
+}
+
+.ad {
+    background-color: #000;
+    color: #fff;
+    padding: 24px;
+    padding-bottom: 40px;
+    margin-top: 50px;
+    border-radius: 5px;
+}
+
+.ad p {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.ad .btns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+.ad a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.ad .btn {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-wp {
+    background-color: #20C758;
+    border-color: #20C758;
+    color: white;
+}
+
+.ad .img {
+    width: 100%;
+    text-align: center;
+}
+
+.tabs button {
+    padding: 20px;
+}
+
+/* main */
+main>section {
+    flex: 8;
+    max-width: 100%;
+    min-width: 280px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.filters {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.dropdown-toggle {
+    border: 1px solid #EDEDED;
+    background: #FBFBFB;
+    height: 42px;
+    padding: 6px 12px;
+}
+
+/* splide */
+#card-slider {
+    margin: 20px 0;
+    padding: 10px;
+    padding-left: 0;
+    /* max-width: 854px; */
+}
+
+.splide__list {
+    display: flex;
+    gap: 20px;
+    align-items: stretch;
+    padding: 10px !important;
+    padding-left: 0 !important;
+}
+
+.splide__slide {
+    width: fit-content !important;
+}
+
+#card-slider .card {
+    box-shadow: 0px 4px 10px -4px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    width: fit-content;
+    height: 100%;
+    /* margin: auto; */
+    justify-content: space-between;
+    margin-left: 0;
+}
+
+#card-slider .card img {
+    width: 200px;
+    height: auto;
+}
+
+#card-slider .card h3 {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    padding: 6px;
+}
+
+#card-slider .card .exec {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border-radius: 5px;
+    background: #000;
+    color: #fff;
+    justify-content: center;
+    width: fit-content;
+    margin: auto;
+}
+
+#card-slider .card>big {
+    text-align: center;
+    font-family: Barlow;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+#card-slider .card p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+#card-slider .card strong {
+    font-family: Inter;
+    font-size: 22.266px;
+    font-weight: 600;
+}
+
+#card-slider .card>span {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+#card-slider .card button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.splide__arrow--prev {
+    left: -15px;
+}
+
+.splide__arrow--next {
+    right: -15px;
+}
+
+/* available cars */
+.card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card-container .card {
+    background: #fff;
+    box-shadow: 0px 4px 14px -4px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: stretch;
+}
+
+.service-info {
+    border-right: 1px dashed #E8E8E8;
+    flex: 2;
+    border-radius: 8px !important;
+    padding: 15px;
+
+    color: #000;
+    font-family: Barlow;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.card-footer {
+    padding: 10px;
+    flex: 3;
+    border-radius: 8px !important;
+    padding: 20px 50px;
+    background-color: transparent;
+    border: none;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 0;
+    align-self: stretch;
+    color: #000;
+    text-align: center;
+    font-family: Barlow;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.co {
+    display: flex;
+    width: 207.2px;
+    height: 45px;
+    min-width: 200px;
+    max-width: 282px;
+    padding: 0.5px 10px 0.5px 0.5px;
+    align-items: center;
+    border-radius: 30px;
+    background: #DEDEDE;
+    gap: 10px;
+
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.co img {
+    border-radius: 50%;
+}
+
+.card-header {
+    border-radius: 8px !important;
+    /* width: 240px; */
+    flex: 2;
+    min-width: 240px;
+    max-width: 300px;
+    background: #F7F7F7;
+    text-align: center;
+    border: none;
+    padding: 15px;
+    text-align: left;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-header .icon {
+    margin: 0;
+    margin-right: auto !important;
+}
+
+.car-image {
+    width: 240px;
+    height: auto;
+}
+
+.service-info h2 {
+    font-family: Barlow;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.service-info p {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.icon {
+    font-size: 16px;
+}
+
+.price {
+    font-family: Inter;
+    font-size: 38px;
+    font-weight: 400;
+}
+
+.card-footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+.card-footer P {
+    margin: 0;
+}
+
+.card-footer li {
+    padding: 0;
+    font-size: 14px;
+    color: #555;
+    width: 140px;
+    text-align: left;
+}

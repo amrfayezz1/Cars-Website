@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Page</title>
+    <!-- libs -->
+    <div>
+        <!-- bootstrap -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- aos -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+            integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- jquery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+            integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- font awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+            integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+            rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet">
+        <!-- splide -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/splidejs/4.1.4/css/splide.min.css"
+            integrity="sha512-KhFXpe+VJEu5HYbJyKQs9VvwGB+jQepqb4ZnlhUF/jQGxYJcjdxOTf6cr445hOc791FFLs18DKVpfrQnONOB1g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- tel -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+    </div>
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/nav.css">
+    <link rel="stylesheet" href="styles/compare.css">
+    <link rel="stylesheet" href="styles/booking.css">
+</head>
+
+<body>
+    <!-- nav -->
+    <nav>
+        <a href="home.html">
+            <img src="imgs/def.svg" alt="Logo">
+        </a>
+    </nav>
+    <!-- stages -->
+    <div class="stages">
+        <div class="one done">
+            <div class="num">
+            </div>
+            <span>Compare</span>
+        </div>
+        <div class="two current">
+            <div class="num">
+            </div>
+            <span>Booking Detail</span>
+        </div>
+        <div class="three">
+            <div class="num">
+            </div>
+            <span>Payment</span>
+        </div>
+    </div>
+
+    <form action="pay.html" method="get">
+        <main>
+            <!-- main -->
+            <section>
+                <div class="passenger">
+                    <div class="header">
+                        Passenger Details
+                    </div>
+                    <div class="form">
+                        <div class="data">
+                            <div class="inp">
+                                <label for="first">First Name</label>
+                                <div class="input-group">
+                                    <select name="title" id="title" class="form-select" required>
+                                        <option value="mr">Mr.</option>
+                                        <option value="mrs">Mrs.</option>
+                                        <option value="miss">Miss</option>
+                                        <option value="dr">Doctor</option>
+                                    </select>
+                                    <input class="form-control" type="text" id="first" name="first"
+                                        placeholder="First Name" required>
+                                </div>
+                            </div>
+                            <div class="inp">
+                                <label for="last">Last Name</label>
+                                <input class="form-control" type="text" id="last" name="last" placeholder="Last Name"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="data">
+                            <div class="inp">
+                                <label for="tel">Phone Number</label>
+                                <input class="form-control" type="text" id="tel" name="tel"
+                                    placeholder="Your Phone Number" required>
+                                <div class="warning">
+                                    You will be receiving both text and phone calls from the driver
+                                    at this number.
+                                </div>
+                            </div>
+                            <div class="inp">
+                                <label for="email">Email</label>
+                                <input class="form-control" type="email" id="email" name="email"
+                                    placeholder="Your Email" required>
+                                <div class="warning">
+                                    Your invoice will be sent to this e-mail address
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="travel">
+                    <div class="header">
+                        Travel Details
+                    </div>
+                    <div class="form">
+                        <h4>Flight Details</h4>
+                        <div class="data">
+                            <div class="inp">
+                                <span>Departure Airport</span>
+                                <p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M20.4801 18.96H3.52012C3.25345 18.96 3.01345 19.0667 2.80012 19.28C2.58678 19.4934 2.48012 19.7334 2.48012 20C2.48012 20.2667 2.58678 20.4934 2.80012 20.68C3.01345 20.8667 3.25345 20.96 3.52012 20.96H20.4801C20.7468 20.96 20.9868 20.8667 21.2001 20.68C21.4135 20.4934 21.5201 20.2667 21.5201 20C21.5201 19.7334 21.4135 19.4934 21.2001 19.28C20.9868 19.0667 20.7468 18.96 20.4801 18.96ZM22.0801 9.60002C21.9734 9.22669 21.7334 8.93336 21.3601 8.72002C20.9868 8.50669 20.6135 8.45336 20.2401 8.56002L14.9601 10L8.48012 4.00002C8.16012 3.73336 7.82678 3.64002 7.48012 3.72002C7.13345 3.80002 6.89345 4.01336 6.76012 4.36002C6.62678 4.70669 6.64012 5.01336 6.80012 5.28002L10.2401 11.28L5.28012 12.56L3.68012 11.36C3.41345 11.1467 3.12012 11.0934 2.80012 11.2L2.48012 11.28C2.32012 11.3334 2.21345 11.4267 2.16012 11.56C2.10678 11.6934 2.10678 11.84 2.16012 12L4.08012 15.28C4.18678 15.44 4.34678 15.5734 4.56012 15.68C4.77345 15.7867 4.98678 15.7867 5.20012 15.68L21.0401 11.44C21.4135 11.3334 21.7068 11.1067 21.9201 10.76C22.1334 10.4134 22.1868 10.0267 22.0801 9.60002Z"
+                                            fill="black" fill-opacity="0.88" />
+                                    </svg>
+                                    London Biggin Hill Airport
+                                </p>
+                            </div>
+                            <div class="inp">
+                                <span>Arrival Airport</span>
+                                <p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24"
+                                        fill="none">
+                                        <path
+                                            d="M20.8101 19.04H3.85006C3.58339 19.04 3.34339 19.1333 3.13006 19.32C2.91673 19.5066 2.81006 19.7333 2.81006 20C2.81006 20.2666 2.91673 20.5066 3.13006 20.72C3.34339 20.9333 3.58339 21.04 3.85006 21.04H20.8101C21.0767 21.04 21.3167 20.9333 21.5301 20.72C21.7434 20.5066 21.8501 20.2666 21.8501 20C21.8501 19.7333 21.7434 19.5066 21.5301 19.32C21.3167 19.1333 21.0767 19.04 20.8101 19.04ZM3.85006 11.6L19.6901 15.84C20.0634 15.9466 20.4367 15.8933 20.8101 15.68C21.1834 15.4666 21.4234 15.16 21.5301 14.76C21.6367 14.36 21.5834 13.9866 21.3701 13.64C21.1567 13.2933 20.8367 13.0666 20.4101 12.96L15.1301 11.52L12.5701 3.11998C12.4634 2.69331 12.2234 2.43998 11.8501 2.35998C11.4767 2.27998 11.1567 2.34665 10.8901 2.55998C10.6234 2.77331 10.4901 3.03998 10.4901 3.35998V10.24L5.45006 8.95998L4.73006 7.11998C4.62339 6.79998 4.41006 6.58665 4.09006 6.47998L3.69006 6.39998C3.58339 6.34665 3.46339 6.37331 3.33006 6.47998C3.19673 6.58665 3.13006 6.71998 3.13006 6.87998V10.64C3.13006 10.8533 3.19673 11.0533 3.33006 11.24C3.46339 11.4266 3.63673 11.5466 3.85006 11.6Z"
+                                            fill="black" fill-opacity="0.88" />
+                                    </svg>
+                                    London Biggin Hill Airport
+                                </p>
+                            </div>
+                        </div>
+                        <div class="inp">
+                            <label for="flightNo">Flight Number</label>
+                            <input type="text" id="flightNo" name="flightNo" readonly value="MS965"
+                                class="form-control">
+                            <div class="warning">
+                                Bear in mind, if you are on a connecting flight, this should be the flight number of the
+                                last part of your flight arriving at your pick up destination.
+                            </div>
+                        </div>
+                        <div class="inp">
+                            <label for="departure">Departure Date & Time</label>
+                            <input type="datetime-local" id="departure" name="departure" readonly class="form-control">
+                        </div>
+                        <h4>Return Flight Details</h4>
+                        <div class="data">
+                            <div class="inp">
+                                <span>Departure Airport</span>
+                                <p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M20.4801 18.96H3.52012C3.25345 18.96 3.01345 19.0667 2.80012 19.28C2.58678 19.4934 2.48012 19.7334 2.48012 20C2.48012 20.2667 2.58678 20.4934 2.80012 20.68C3.01345 20.8667 3.25345 20.96 3.52012 20.96H20.4801C20.7468 20.96 20.9868 20.8667 21.2001 20.68C21.4135 20.4934 21.5201 20.2667 21.5201 20C21.5201 19.7334 21.4135 19.4934 21.2001 19.28C20.9868 19.0667 20.7468 18.96 20.4801 18.96ZM22.0801 9.60002C21.9734 9.22669 21.7334 8.93336 21.3601 8.72002C20.9868 8.50669 20.6135 8.45336 20.2401 8.56002L14.9601 10L8.48012 4.00002C8.16012 3.73336 7.82678 3.64002 7.48012 3.72002C7.13345 3.80002 6.89345 4.01336 6.76012 4.36002C6.62678 4.70669 6.64012 5.01336 6.80012 5.28002L10.2401 11.28L5.28012 12.56L3.68012 11.36C3.41345 11.1467 3.12012 11.0934 2.80012 11.2L2.48012 11.28C2.32012 11.3334 2.21345 11.4267 2.16012 11.56C2.10678 11.6934 2.10678 11.84 2.16012 12L4.08012 15.28C4.18678 15.44 4.34678 15.5734 4.56012 15.68C4.77345 15.7867 4.98678 15.7867 5.20012 15.68L21.0401 11.44C21.4135 11.3334 21.7068 11.1067 21.9201 10.76C22.1334 10.4134 22.1868 10.0267 22.0801 9.60002Z"
+                                            fill="black" fill-opacity="0.88" />
+                                    </svg>
+                                    London Biggin Hill Airport
+                                </p>
+                            </div>
+                            <div class="inp">
+                                <span>Arrival Airport</span>
+                                <p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24"
+                                        fill="none">
+                                        <path
+                                            d="M20.8101 19.04H3.85006C3.58339 19.04 3.34339 19.1333 3.13006 19.32C2.91673 19.5066 2.81006 19.7333 2.81006 20C2.81006 20.2666 2.91673 20.5066 3.13006 20.72C3.34339 20.9333 3.58339 21.04 3.85006 21.04H20.8101C21.0767 21.04 21.3167 20.9333 21.5301 20.72C21.7434 20.5066 21.8501 20.2666 21.8501 20C21.8501 19.7333 21.7434 19.5066 21.5301 19.32C21.3167 19.1333 21.0767 19.04 20.8101 19.04ZM3.85006 11.6L19.6901 15.84C20.0634 15.9466 20.4367 15.8933 20.8101 15.68C21.1834 15.4666 21.4234 15.16 21.5301 14.76C21.6367 14.36 21.5834 13.9866 21.3701 13.64C21.1567 13.2933 20.8367 13.0666 20.4101 12.96L15.1301 11.52L12.5701 3.11998C12.4634 2.69331 12.2234 2.43998 11.8501 2.35998C11.4767 2.27998 11.1567 2.34665 10.8901 2.55998C10.6234 2.77331 10.4901 3.03998 10.4901 3.35998V10.24L5.45006 8.95998L4.73006 7.11998C4.62339 6.79998 4.41006 6.58665 4.09006 6.47998L3.69006 6.39998C3.58339 6.34665 3.46339 6.37331 3.33006 6.47998C3.19673 6.58665 3.13006 6.71998 3.13006 6.87998V10.64C3.13006 10.8533 3.19673 11.0533 3.33006 11.24C3.46339 11.4266 3.63673 11.5466 3.85006 11.6Z"
+                                            fill="black" fill-opacity="0.88" />
+                                    </svg>
+                                    London Biggin Hill Airport
+                                </p>
+                            </div>
+                        </div>
+                        <div class="inp">
+                            <label for="flightNo">Flight Number</label>
+                            <input type="text" id="flightNo" name="flightNo" readonly value="MS965"
+                                class="form-control">
+                            <div class="warning">
+                                Bear in mind, if you are on a connecting flight, this should be the flight number of the
+                                last part of your flight arriving at your pick up destination.
+                            </div>
+                        </div>
+                        <div class="inp">
+                            <label for="departure">Departure Date & Time</label>
+                            <input type="datetime-local" id="departure" name="departure" readonly class="form-control">
+                        </div>
+                        <div class="inp">
+                            <label for="notes">Notes <small>(optional)</small></label>
+                            <textarea rows="3" name="notes" id="notes" class="form-control"></textarea>
+                        </div>
+                        <div class="inp">
+                            <label for="directions">Additional Directions <small>(optional)</small></label>
+                            <textarea rows="3" name="directions" id="directions" class="form-control"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- aside -->
+            <aside>
+                <div class="info">
+                    <img src="imgs/car.png" alt="">
+                    <div class="name">
+                        Standard Sedan
+                    </div>
+                    <div class="company">
+                        <img src="imgs/co.png" alt="co">
+                        Jewels Airport Transfers Ltd
+                    </div>
+                    <div class="minor">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                            <path
+                                d="M17.4749 13.12C19.0216 14.1867 19.7949 15.4933 19.7949 17.04V20H22.8349C23.1016 20 23.3283 19.9067 23.5149 19.72C23.7016 19.5333 23.7949 19.3067 23.7949 19.04V17.04C23.7949 16.0267 23.1016 15.1467 21.7149 14.4C20.5416 13.8133 19.1283 13.3867 17.4749 13.12ZM9.79492 12C10.9149 12 11.8616 11.6133 12.6349 10.84C13.4083 10.0667 13.7949 9.12 13.7949 8C13.7949 6.88 13.4083 5.93333 12.6349 5.16C11.8616 4.38667 10.9283 4 9.83492 4C8.74159 4 7.79492 4.38667 6.99492 5.16C6.19492 5.93333 5.79492 6.88 5.79492 8C5.79492 9.12 6.19492 10.0667 6.99492 10.84C7.79492 11.6133 8.72826 12 9.79492 12ZM15.7949 12C16.9149 12 17.8616 11.6133 18.6349 10.84C19.4083 10.0667 19.7949 9.12 19.7949 8C19.7949 6.88 19.4083 5.93333 18.6349 5.16C17.8616 4.38667 16.9149 4 15.7949 4C15.4216 4 14.9949 4.08 14.5149 4.24C15.3683 5.36 15.7949 6.61333 15.7949 8C15.7949 9.38667 15.3683 10.64 14.5149 11.76C14.9949 11.92 15.4216 12 15.7949 12ZM9.79492 13.04C8.83492 13.04 7.76826 13.1733 6.59492 13.44C5.26159 13.76 4.16826 14.2133 3.31492 14.8C2.30159 15.44 1.79492 16.1867 1.79492 17.04V19.04C1.79492 19.3067 1.90159 19.5333 2.11492 19.72C2.32826 19.9067 2.56826 20 2.83492 20H16.8349C17.1016 20 17.3283 19.9067 17.5149 19.72C17.7016 19.5333 17.7949 19.3067 17.7949 19.04V17.04C17.7949 16.1867 17.3149 15.44 16.3549 14.8C15.5016 14.2133 14.4083 13.76 13.0749 13.44C11.9016 13.1733 10.8083 13.04 9.79492 13.04Z"
+                                fill="black" />
+                        </svg>
+                        Min 1 Max 4 Passengers
+                    </div>
+                    <div class="minor">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="24" viewBox="0 0 13 24" fill="none">
+                            <g clip-path="url(#clip0_32_2747)">
+                                <path
+                                    d="M3.63496 22.72H1.63496V23.6C1.63496 23.7067 1.67496 23.8 1.75496 23.88C1.83496 23.96 1.92829 24 2.03496 24H3.23496C3.34163 24 3.43496 23.96 3.51496 23.88C3.59496 23.8 3.63496 23.7067 3.63496 23.6V22.72ZM12.035 22.72H10.035V23.6C10.035 23.7067 10.075 23.8 10.155 23.88C10.235 23.96 10.3283 24 10.435 24H11.635C11.7416 24 11.835 23.96 11.915 23.88C11.995 23.8 12.035 23.7067 12.035 23.6V22.72ZM3.23496 6.24H1.23496C1.12829 6.24 1.03496 6.28 0.954961 6.36C0.874961 6.44 0.834961 6.53333 0.834961 6.64V21.92C0.834961 22.0267 0.874961 22.12 0.954961 22.2C1.03496 22.28 1.12829 22.32 1.23496 22.32H12.435C12.5416 22.32 12.635 22.28 12.715 22.2C12.795 22.12 12.835 22.0267 12.835 21.92V6.64C12.835 6.53333 12.795 6.44 12.715 6.36C12.635 6.28 12.5416 6.24 12.435 6.24H10.435V0.4C10.435 0.293333 10.395 0.200001 10.315 0.120001C10.235 0.0400009 10.1416 0 10.035 0H3.63496C3.52829 0 3.43496 0.0400009 3.35496 0.120001C3.27496 0.200001 3.23496 0.293333 3.23496 0.4V6.24ZM6.43496 9.28V19.28C6.43496 19.3867 6.47496 19.48 6.55496 19.56C6.63496 19.64 6.72829 19.68 6.83496 19.68C6.94163 19.68 7.03496 19.64 7.11496 19.56C7.19496 19.48 7.23496 19.3867 7.23496 19.28V9.28C7.23496 9.17333 7.19496 9.08 7.11496 9C7.03496 8.92 6.94163 8.88 6.83496 8.88C6.72829 8.88 6.63496 8.92 6.55496 9C6.47496 9.08 6.43496 9.17333 6.43496 9.28ZM9.23496 9.28V19.28C9.23496 19.3867 9.27496 19.48 9.35496 19.56C9.43496 19.64 9.52829 19.68 9.63496 19.68C9.74163 19.68 9.83496 19.64 9.91496 19.56C9.99496 19.48 10.035 19.3867 10.035 19.28V9.28C10.035 9.17333 9.99496 9.08 9.91496 9C9.83496 8.92 9.74163 8.88 9.63496 8.88C9.52829 8.88 9.43496 8.92 9.35496 9C9.27496 9.08 9.23496 9.17333 9.23496 9.28ZM3.63496 9.28V19.28C3.63496 19.3867 3.67496 19.48 3.75496 19.56C3.83496 19.64 3.92829 19.68 4.03496 19.68C4.14163 19.68 4.23496 19.64 4.31496 19.56C4.39496 19.48 4.43496 19.3867 4.43496 19.28V9.28C4.43496 9.17333 4.39496 9.08 4.31496 9C4.23496 8.92 4.14163 8.88 4.03496 8.88C3.92829 8.88 3.83496 8.92 3.75496 9C3.67496 9.08 3.63496 9.17333 3.63496 9.28ZM9.63496 6.24H4.03496V2.48H9.63496V6.24Z"
+                                    fill="black" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_32_2747">
+                                    <rect width="12" height="24" fill="white"
+                                        transform="matrix(1 0 0 -1 0.834961 24)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        Max 4 Suitcase
+                    </div>
+                    <div class="det">
+                        <b>Pick Up</b>
+                        <span>Europe</span>
+                    </div>
+                    <div class="det">
+                        <b>Drop Off</b>
+                        <span>London Biggin Hill Airport</span>
+                    </div>
+                    <div class="det">
+                        <b>Passengers</b>
+                        <span>1 Adult</span>
+                    </div>
+                    <div class="det">
+                        <b>Date</b>
+                        <span>05 Jun 2024, 12:00 <small>(12:00 pm)</small></span>
+                    </div>
+                    <div class="det">
+                        <b>Return Date</b>
+                        <span>05 Jun 2024, 12:00 <small>(12:00 pm)</small></span>
+                    </div>
+                </div>
+                <div class="total">
+                    <div class="price">
+                        <b>Total</b>
+                        <big>£3,700.67</big>
+                    </div>
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                            <path
+                                d="M7.8348 1.24666C6.77702 1.24666 5.8048 1.51111 4.91813 2.04C4.03146 2.56889 3.32369 3.27666 2.7948 4.16333C2.26591 5.05 2.00146 6.02222 2.00146 7.08C2.00146 8.13777 2.26591 9.11 2.7948 9.99666C3.32369 10.8833 4.03146 11.5911 4.91813 12.12C5.8048 12.6489 6.77702 12.9133 7.8348 12.9133C8.89258 12.9133 9.8648 12.6489 10.7515 12.12C11.6381 11.5911 12.3459 10.8833 12.8748 9.99666C13.4037 9.11 13.6681 8.13777 13.6681 7.08C13.6681 6.02222 13.4037 5.05 12.8748 4.16333C12.3459 3.27666 11.6381 2.56889 10.7515 2.04C9.8648 1.51111 8.89258 1.24666 7.8348 1.24666ZM6.24813 9.6L4.14813 7.5C4.0548 7.37555 4.00813 7.23555 4.00813 7.08C4.00813 6.92444 4.06258 6.78444 4.17146 6.66C4.28035 6.53555 4.41258 6.47333 4.56813 6.47333C4.72369 6.47333 4.86369 6.53555 4.98813 6.66L6.66813 8.34L10.6815 4.32666C10.8059 4.20222 10.9459 4.14 11.1015 4.14C11.257 4.14 11.3892 4.20222 11.4981 4.32666C11.607 4.45111 11.6615 4.59111 11.6615 4.74666C11.6615 4.90222 11.6148 5.04222 11.5215 5.16666L7.08813 9.6C6.96369 9.69333 6.82369 9.74 6.66813 9.74C6.51258 9.74 6.37258 9.69333 6.24813 9.6Z"
+                                fill="#424242" />
+                        </svg>
+                        Free Cancellation
+                    </span>
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                            <path
+                                d="M7.8348 1.24666C6.77702 1.24666 5.8048 1.51111 4.91813 2.04C4.03146 2.56889 3.32369 3.27666 2.7948 4.16333C2.26591 5.05 2.00146 6.02222 2.00146 7.08C2.00146 8.13777 2.26591 9.11 2.7948 9.99666C3.32369 10.8833 4.03146 11.5911 4.91813 12.12C5.8048 12.6489 6.77702 12.9133 7.8348 12.9133C8.89258 12.9133 9.8648 12.6489 10.7515 12.12C11.6381 11.5911 12.3459 10.8833 12.8748 9.99666C13.4037 9.11 13.6681 8.13777 13.6681 7.08C13.6681 6.02222 13.4037 5.05 12.8748 4.16333C12.3459 3.27666 11.6381 2.56889 10.7515 2.04C9.8648 1.51111 8.89258 1.24666 7.8348 1.24666ZM6.24813 9.6L4.14813 7.5C4.0548 7.37555 4.00813 7.23555 4.00813 7.08C4.00813 6.92444 4.06258 6.78444 4.17146 6.66C4.28035 6.53555 4.41258 6.47333 4.56813 6.47333C4.72369 6.47333 4.86369 6.53555 4.98813 6.66L6.66813 8.34L10.6815 4.32666C10.8059 4.20222 10.9459 4.14 11.1015 4.14C11.257 4.14 11.3892 4.20222 11.4981 4.32666C11.607 4.45111 11.6615 4.59111 11.6615 4.74666C11.6615 4.90222 11.6148 5.04222 11.5215 5.16666L7.08813 9.6C6.96369 9.69333 6.82369 9.74 6.66813 9.74C6.51258 9.74 6.37258 9.69333 6.24813 9.6Z"
+                                fill="#424242" />
+                        </svg>
+                        All Taxes Included
+                    </span>
+                </div>
+                <button class="btn btn-primary" type="submit">
+                    <span>Next: Review & Pay</span>
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <g clip-path="url(#clip0_32_2420)">
+                                <path
+                                    d="M3.52 5.03998H-0.96L4 12L-0.96 19.04H3.52L8.48 12L3.52 5.03998ZM-3.52 5.03998H-8L-2.96 12L-8 19.04H-3.52L1.52 12L-3.52 5.03998Z"
+                                    fill="#C9FEE0" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_32_2420">
+                                    <rect width="24" height="24" fill="white" transform="matrix(1 0 0 -1 0 24)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </span>
+                </button>
+            </aside>
+        </main>
+    </form>
+
+    <!-- scripts -->
+    <div>
+        <!-- bootstrap -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"
+            integrity="sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- popper -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"
+            integrity="sha512-TPh2Oxlg1zp+kz3nFA0C5vVC6leG/6mm1z9+mA81MI5eaUVqasPLO8Cuk4gMF4gUfP5etR73rgU/8PNMsSesoQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- aos -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+            integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            AOS.init();
+        </script>
+        <!-- splide -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/splidejs/4.1.4/js/splide.min.js"
+            integrity="sha512-4TcjHXQMLM7Y6eqfiasrsnRCc8D/unDeY1UGKGgfwyLUCTsHYMxF7/UHayjItKQKIoP6TTQ6AMamb9w2GMAvNg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- phone -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    </div>
+    <!-- phone -->
+    <script>
+        const phoneInputField = document.querySelector("#tel");
+        const phoneInput = window.intlTelInput(phoneInputField, {
+            initialCountry: "auto",
+            preferredCountries: ["gb"],
+            geoIpLookup: function (callback) {
+                fetch('https://api.ipdata.co/?api-key=4a585be8046184299df0a95a7e3169bed16bca2a1d04ac037cd72ed4', {
+                    cache: 'reload'
+                }).then(response => {
+                    if (response.ok) {
+                        return response.json();
+                    }
+                    throw new Error('Failed: ' + response.status);
+                }).then(ipjson => {
+                    phoneInput.setCountry(ipjson.country_code);
+                }).catch(e => {
+                    callback('gb');
+                })
+            },
+            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+        });
+    </script>
+</body>
+
+</html>
